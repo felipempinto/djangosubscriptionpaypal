@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Subscriptions</title>
+  {% load static %}
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="{% static 'main/css/materialize.css' %}">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Compiled and minified JavaScript -->
+      <script src="{% static 'main/js/materialize.min.js' %}"></script>
+</head>
+<body>
+{% include "main/includes/navbar.html" %}
+  
+<main>
+  {% block content %}
+  {% endblock %}
+</main>  
+  
+</body>
+</html>

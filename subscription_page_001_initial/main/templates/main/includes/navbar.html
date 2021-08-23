@@ -1,0 +1,19 @@
+{% load static %}
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down ">
+        {% if user.is_authenticated %}
+
+        <li><a class="black-text text-lighten-3" href="/subscription">Subscribe</a></li>
+        <li><a class="black-text text-lighten-3" href="/logout">Log out</a></li>
+        
+        {% else %}
+        <li><a class="white-text text-lighten-3" href="/login">Log in</a></li>
+        <li><a class="white-text text-lighten-3" href="/register">Register</a></li>
+        {% endif %}
+        <li><a class="white-text text-lighten-3" href="/blog">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+

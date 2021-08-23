@@ -1,0 +1,18 @@
+{% extends  "main/header.html"%}
+
+{% block content %}
+<div class="container">
+    <form class="col s12" method="POST">
+        {% csrf_token  %}
+        {{ form.as_p }}
+        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+        <p>
+            <button class="btn waves-effect grey darken-3" type="submit" name="action">Register
+                <i class="material-icons right ">send</i>
+            </button>
+        </p>
+    </form>
+</div>
+<p>If you already have an account, you may <a href='/login'><strong>log in</strong></a></p>   
+{% endblock %}
+
